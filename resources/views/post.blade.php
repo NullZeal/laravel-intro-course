@@ -1,8 +1,8 @@
 <x-layout>
         <article>
-            <h1>
-                {{ $post->title }}
-            </h1>
+            <h2>
+                {!! $post->title !!}
+            </h2>
             <div>
                 {!! $post->body !!}
             </div>
