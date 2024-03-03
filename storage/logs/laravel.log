@@ -3606,3 +3606,7 @@
 [stacktrace]
 #0 {main}
 "} 
+[2024-03-03 23:27:14] local.DEBUG: select * from `posts`  
+[2024-03-03 23:27:14] local.DEBUG: select * from `categories` where `categories`.`id` = ? limit 1  
+[2024-03-03 23:27:14] local.DEBUG: select * from `categories` where `categories`.`id` = ? limit 1  
+[2024-03-03 23:27:14] local.DEBUG: select * from `categories` where `categories`.`id` = ? limit 1  
