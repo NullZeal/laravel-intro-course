@@ -21,7 +21,6 @@
         </article>
 
         <p>That was the article.</p>
-
         <a href="/">Go back</a>
  <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
