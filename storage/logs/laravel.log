@@ -3602,3 +3602,7 @@
 #35 A:\\Coding\\laravel\\blog\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle()
 #36 {main}
 "} 
+[2024-03-03 21:38:39] local.ERROR: Cannot use temporary expression in write context {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot use temporary expression in write context at A:\\Coding\\laravel\\blog\\vendor\\psy\\psysh\\src\\ExecutionLoopClosure.php(52) : eval()'d code:1)
+[stacktrace]
+#0 {main}
+"} 
