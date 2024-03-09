@@ -1,18 +1,19 @@
 <x-layout>
-        <article>
-            <h2>
-                {!! $post->title !!}
-            </h2>
+    <article>
+        <h2>
+            {!! $post->title !!}
+        </h2>
 
-            <p>
-                By <a href="{{ $post->author->username }}">{{ $post->author->name }}</a> in <a href="/categories/{{$post->category->slug}}">{{ $post->category->name }}</a>
-            </p>
+        <p>
+            By <a href="{{ $post->author->username }}">{{ $post->author->name }}</a> in <a
+                href="/categories/{{$post->category->slug}}">{{ $post->category->name }}</a>
+        </p>
 
-            <div>
-                {!! $post->body !!}
-            </div>
+        <div>
+            {!! $post->body !!}
+        </div>
 
-        </article>
+    </article>
 
-        <a href="/">Go back</a>
+    <a href="/">Go back</a>
 </x-layout>
