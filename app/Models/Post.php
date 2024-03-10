@@ -25,6 +25,12 @@ class Post extends Model
             $query->whereHas('category', fn ($query) => 
             $query->where('slug', $category)));
 
+
+        $query
+        ->when($filters['author'] ?? false, fn ($query, $author) => 
+            $query->whereHas('author', fn ($query) => 
+            $query->where('username', $author)));
+
     }
 
     protected $with = ['category', 'author'];
