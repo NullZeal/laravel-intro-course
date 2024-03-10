@@ -44,6 +44,12 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
+    // Not needed since we cast the password with hashed: https://laravel.com/docs/10.x/eloquent-mutators#introduction
+
+    // public function setPasswordAttribute($password){ 
+    //     $this->attributes['password'] = bcrypt($password);
+    // }
+
     public function posts(){
         return $this->hasMany(Post::class);
     }
