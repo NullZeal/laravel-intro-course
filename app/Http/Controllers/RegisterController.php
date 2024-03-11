@@ -23,7 +23,9 @@ class RegisterController extends Controller
             'password'=> ['required', 'max:255', 'min:7'],
             ]);
 
-        User::create($attributes);
+        $user = User::create($attributes);
+
+        auth()->login($user);
 
         return redirect()->route('home')->with('success','Account created!');;
     }
