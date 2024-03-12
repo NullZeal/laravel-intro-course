@@ -33,9 +33,9 @@
                     @else
                         {{ $paginator->count() }}
                     @endif
-                    {!! __('out of') !!}
+                    {!! __('of') !!}
                     <span class="font-medium ">{{ $paginator->total() }}</span>
-                    {!! __('cursed posts') !!}
+                    {!! __(' posts') !!}
                 </p>
             </div>
 
