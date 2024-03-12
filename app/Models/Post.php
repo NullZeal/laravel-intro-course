@@ -25,11 +25,9 @@ class Post extends Model
             $query->whereHas('category', fn ($query) => 
                 $query->where('slug', $category)));
 
-
         $query->when($filters['author'] ?? false, fn ($query, $author) => 
             $query->whereHas('author', fn ($query) => 
                 $query->where('username', $author)));
-
     }
 
     protected $with = ['category', 'author'];
@@ -40,5 +38,9 @@ class Post extends Model
 
     public function author(){
         return $this->belongsTo(User::class, 'user_id');
+    }
+
+    public function comments(){
+        return $this->hasMany(Comment::class);
     }
 }
