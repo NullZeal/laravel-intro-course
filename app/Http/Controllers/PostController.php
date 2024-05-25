@@ -5,21 +5,17 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Post;
 
-class PostController extends Controller
-{
-    public function index(){
-
+class PostController extends Controller {
+    public function index() {
         return view('posts.index', [
             'posts' => Post::latest()
-            ->filter(request(['search', 'category', 'author']))
-            ->paginate(6)->withQueryString(),
+                ->filter(request(['search', 'category', 'author']))
+                ->paginate(6)->withQueryString(),
         ]);
     }
-
-    public function show(Post $post){
-
+    public function show(Post $post) {
         return view('posts.show', [
-            'post'=> $post
+            'post' => $post
         ]);
     }
 }
